@@ -742,4 +742,38 @@ Manages all outbound and inbound communication channels — both with clients an
 
 ---
 
+## 11. Global UX Requirements (Admin-wide)
+
+These requirements apply to **every** page, form, table, and entity in the admin. Captured from the "General important issues to fix" section of the Risely & Velmie Figma file.
+
+### 11.1 Every Page / Form Must Have
+
+- **CSV export** — downloadable export of the current view
+- **Links to related/connected objects** — e.g. from a transaction, links to the client, wallet, card involved
+- **Right-click to open in new tab** — any linked item must support right-click → open in new tab
+
+### 11.2 Every Table Must Have
+
+| Requirement | Detail |
+|---|---|
+| Search | Full-text search across all relevant fields |
+| Filters | All data fields filterable; active filters reflected in the URL |
+| Sorting | Column-level sorting |
+| Horizontal scroll | Never truncate columns — horizontal scroll instead |
+| CSV export | Export the currently filtered/sorted view with all columns |
+| Row → entity page | Clicking a row opens the entity's detail page |
+| Status column | Every table shows status per row |
+| Timestamps | Created/updated timestamps visible per row |
+| Multi-value cells | A single cell may contain more than one data point |
+| FE search in dropdowns | Every dropdown/filter must have a front-end search input |
+
+### 11.3 Right-Click Behavior
+
+Right-clicking any of the following must offer "Open in new tab":
+- Table rows
+- Entity references (client name, wallet ID, card number, etc.)
+- Any linked text in entity detail pages
+
+---
+
 *End of document. For board legend reference: solid-fill items are new features being built; light/transparent items existed in the old Velmie demo; dashed-border items are unconfirmed/planned; items labelled "NICE to have" are lower priority.*
