@@ -1,0 +1,95 @@
+/* App-level overrides — keep minimal */
+/* Consumer app global styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+html, body {
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Remove number input spinners */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] { -moz-appearance: textfield; }
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 8px;
+}
+
+/* List transition for transaction cards */
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.3s ease;
+}
+.list-enter-from {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+/* Fade transition for home content */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.25s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* Slide transitions for buy steps */
+.slide-left-enter-active,
+.slide-left-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  position: absolute;
+  width: 100%;
+}
+.slide-left-enter-from { opacity: 0; transform: translateX(30px); }
+.slide-left-leave-to  { opacity: 0; transform: translateX(-30px); }
+.slide-right-enter-from { opacity: 0; transform: translateX(-30px); }
+.slide-right-leave-to  { opacity: 0; transform: translateX(30px); }
+
+/* Success animation keyframes */
+@keyframes circle-draw {
+  to { stroke-dashoffset: 0; }
+}
+@keyframes check-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+/* Success screen scale-in */
+.success-enter-active { transition: all 0.3s ease-out; }
+.success-enter-from { opacity: 0; transform: scale(0.9); }
+
+/* Tap feedback — mobile-first */
+button, [role="button"], a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.tap-feedback,
+button.bg-brand-600,
+button.bg-warning-400 {
+  transition: transform 80ms ease, opacity 80ms ease;
+}
+
+.tap-feedback:active,
+button:active {
+  transform: scale(0.97);
+  opacity: 0.88;
+}

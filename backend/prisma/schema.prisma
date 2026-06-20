@@ -1,0 +1,345 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                      String   @id @default(cuid())
+  email                   String   @unique
+  passwordHash            String
+  status                  String   @default("active")
+  kycStatus               String   @default("not_started")
+  riskLevel               String   @default("low")
+  attributedToB2BClientId String?
+  createdAt               DateTime @default(now())
+  updatedAt               DateTime @updatedAt
+
+  b2bClient       B2BClient?       @relation(fields: [attributedToB2BClientId], references: [id])
+  kycApplicants   KYCApplicant[]
+  bankAccounts    BankAccount[]
+  wallets         Wallet[]
+  transactions    Transaction[]
+  analyticsEvents AnalyticsEvent[]
+}
+
+model B2BClient {
+  id                     String   @id @default(cuid())
+  name                   String
+  status                 String   @default("active")
+  commissionSharePercent Float    @default(10)
+  platformFeePercent     Float    @default(2.5)
+  createdAt              DateTime @default(now())
+  updatedAt              DateTime @updatedAt
+
+  widgetConfigs      WidgetConfig[]
+  users              User[]
+  transactions       Transaction[]
+  partnerCommissions PartnerCommission[]
+}
+
+model WidgetConfig {
+  id                      String   @id @default(cuid())
+  b2bClientId             String
+  name                    String
+  status                  String   @default("active")
+  allowedFiatCurrencies   String   @default("EUR,USD,GBP")
+  allowedCryptoCurrencies String   @default("BTC,ETH,USDT")
+  defaultFiatCurrency     String   @default("EUR")
+  defaultCryptoCurrency   String   @default("BTC")
+  themeMode               String   @default("light")
+  primaryColorToken       String   @default("brand")
+  redirectUrl             String?
+  webhookUrl              String?
+  createdAt               DateTime @default(now())
+  updatedAt               DateTime @updatedAt
+
+  b2bClient B2BClient @relation(fields: [b2bClientId], references: [id])
+}
+
+model KYCApplicant {
+  id                 String    @id @default(cuid())
+  userId             String
+  status             String    @default("not_started")
+  levelName          String    @default("basic-kyc-level")
+  firstName          String
+  lastName           String
+  dateOfBirth        String
+  country            String
+  documentType       String?
+  documentStatus     String?
+  rejectionReason    String?
+  reviewedBy         String?
+  reviewedAt         DateTime?
+  requiredSteps      String    @default("[]")
+  completedSteps     String    @default("[]")
+  sourceOfFunds      String?
+  sourceOfFundsRange String?
+  pepDeclaration     Boolean   @default(false)
+  addressProof       Boolean   @default(false)
+  selfieCompleted    Boolean   @default(false)
+  countryRisk        String?
+  createdAt          DateTime  @default(now())
+  updatedAt          DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id])
+}
+
+model BankAccount {
+  id              String   @id @default(cuid())
+  userId          String
+  iban            String   @unique
+  currency        String
+  balance         Float    @default(0)
+  status          String   @default("active")
+  providerName    String   @default("Prodigy Bank Simulator")
+  bic             String   @default("PRODDE77XXX")
+  sortCode        String?
+  accountNumber   String?
+  accountType     String   @default("current")
+  dailyLimitEur   Float    @default(1000)
+  monthlyLimitEur Float    @default(5000)
+  swift           String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id])
+}
+
+model Wallet {
+  id        String   @id @default(cuid())
+  userId    String
+  currency  String
+  address   String   @unique
+  balance   Float    @default(0)
+  status    String   @default("active")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id])
+}
+
+model Currency {
+  code     String  @id
+  type     String
+  name     String
+  symbol   String
+  decimals Int
+  isActive Boolean @default(true)
+}
+
+model Quote {
+  id                String   @id @default(cuid())
+  userId            String?
+  b2bClientId       String?
+  sourceCurrency    String
+  targetCurrency    String
+  sourceAmount      Float
+  targetAmount      Float
+  rate              Float
+  spread            Float
+  platformFeeAmount Float
+  partnerFeeAmount  Float
+  networkFeeAmount  Float
+  expiresAt         DateTime
+  status            String   @default("offered")
+  createdAt         DateTime @default(now())
+
+  transactions Transaction[]
+}
+
+model Transaction {
+  id             String   @id @default(cuid())
+  userId         String
+  b2bClientId    String?
+  quoteId        String?
+  type           String
+  sourceCurrency String
+  targetCurrency String
+  sourceAmount   Float
+  targetAmount   Float
+  status         String   @default("created")
+  riskScore      Float?
+  riskDecision   String?
+  failureReason  String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  user               User                @relation(fields: [userId], references: [id])
+  b2bClient          B2BClient?          @relation(fields: [b2bClientId], references: [id])
+  quote              Quote?              @relation(fields: [quoteId], references: [id])
+  riskReviews        RiskReview[]
+  ledgerEntries      LedgerEntry[]
+  partnerCommissions PartnerCommission[]
+}
+
+model RiskReview {
+  id             String    @id @default(cuid())
+  transactionId  String
+  userId         String
+  riskScore      Float
+  riskReasons    String
+  status         String    @default("open")
+  assignedTo     String?
+  decision       String?
+  decisionReason String?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  transaction Transaction @relation(fields: [transactionId], references: [id])
+}
+
+model LedgerAccount {
+  id          String   @id @default(cuid())
+  ownerType   String
+  ownerId     String
+  currency    String
+  accountType String
+  name        String
+  createdAt   DateTime @default(now())
+
+  entries LedgerEntry[]
+
+  @@unique([ownerType, ownerId, currency, accountType])
+}
+
+model LedgerEntry {
+  id              String   @id @default(cuid())
+  transactionId   String?
+  ledgerAccountId String
+  direction       String
+  amount          Float
+  currency        String
+  description     String
+  createdAt       DateTime @default(now())
+
+  transaction   Transaction?  @relation(fields: [transactionId], references: [id])
+  ledgerAccount LedgerAccount @relation(fields: [ledgerAccountId], references: [id])
+}
+
+model PartnerCommission {
+  id            String   @id @default(cuid())
+  b2bClientId   String
+  transactionId String
+  amount        Float
+  currency      String
+  status        String   @default("accrued")
+  createdAt     DateTime @default(now())
+
+  b2bClient   B2BClient   @relation(fields: [b2bClientId], references: [id])
+  transaction Transaction @relation(fields: [transactionId], references: [id])
+}
+
+model AnalyticsEvent {
+  id          String   @id @default(cuid())
+  sessionId   String
+  userId      String?
+  b2bClientId String?
+  appName     String
+  eventName   String
+  route       String
+  metadata    String   @default("{}")
+  createdAt   DateTime @default(now())
+
+  user User? @relation(fields: [userId], references: [id])
+}
+
+model SystemEvent {
+  id            String   @id @default(cuid())
+  correlationId String
+  eventName     String
+  entityType    String
+  entityId      String
+  source        String
+  target        String
+  status        String
+  payload       String   @default("{}")
+  createdAt     DateTime @default(now())
+}
+
+model KYCLevel {
+  id              String   @id
+  name            String
+  description     String
+  dailyLimitEur   Float
+  monthlyLimitEur Float
+  steps           String
+  isActive        Boolean  @default(true)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model CountryRisk {
+  countryCode   String   @id
+  countryName   String
+  riskLevel     String
+  requiredLevel String?
+  isBlocked     Boolean  @default(false)
+  isActive      Boolean  @default(true)
+  updatedBy     String?
+  updatedAt     DateTime @updatedAt
+}
+
+model Notification {
+  id        String    @id @default(cuid())
+  userId    String?
+  channel   String    @default("in_app")
+  type      String
+  title     String
+  body      String
+  actionUrl String?
+  urgency   String    @default("info")
+  isRead    Boolean   @default(false)
+  readAt    DateTime?
+  metadata  String    @default("{}")
+  createdAt DateTime  @default(now())
+}
+
+model Beneficiary {
+  id            String   @id @default(cuid())
+  userId        String
+  name          String
+  email         String?
+  type          String   // "risely" | "fiat_external" | "crypto_external"
+  iban          String?
+  bic           String?
+  walletAddress String?
+  network       String?  // "ethereum" | "bitcoin"
+  currency      String?
+  isPersonal    Boolean  @default(true)
+  createdAt     DateTime @default(now())
+}
+
+model SafetyStatus {
+  id            String   @id @default(cuid())
+  userId        String   @unique
+  emailVerified Boolean  @default(false)
+  phoneVerified Boolean  @default(false)
+  mpinSet       Boolean  @default(false)
+  biometrics    Boolean  @default(false)
+  twoFaEnabled  Boolean  @default(false)
+  updatedAt     DateTime @updatedAt
+}
+
+model AdminActionLog {
+  id          String   @id @default(cuid())
+  adminEmail  String
+  action      String
+  entityType  String
+  entityId    String
+  before      String?
+  after       String?
+  createdAt   DateTime @default(now())
+}
+
+model AdminUser {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String
+  role      String   @default("admin")   // 'admin' | 'compliance' | 'support'
+  status    String   @default("active")  // 'active' | 'suspended'
+  createdAt DateTime @default(now())
+}

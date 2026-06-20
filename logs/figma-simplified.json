@@ -1,0 +1,1663 @@
+{
+  "name": "Risely [my file]",
+  "nodes": [
+    {
+      "id": "8:143376",
+      "name": "Login & KYC",
+      "type": "SECTION",
+      "layout": {
+        "mode": "none",
+        "sizing": {}
+      },
+      "fills": [
+        "#FFFCF1"
+      ],
+      "strokes": [
+        "#FFE8A3"
+      ],
+      "strokeWeight": "2px",
+      "children": [
+        {
+          "id": "8:143377",
+          "name": "App on this stage",
+          "type": "SECTION",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 2576,
+              "y": 1268
+            },
+            "dimensions": {
+              "width": 1906,
+              "height": 604
+            }
+          },
+          "fills": "fill_5d01f0e1",
+          "strokes": "fill_bcbbe3cd",
+          "strokeWeight": "2px",
+          "children": [
+            {
+              "id": "8:143378",
+              "name": "Shape with text",
+              "template": "EL-1c90ec5c"
+            },
+            {
+              "id": "8:143379",
+              "name": "Shape with text",
+              "type": "SHAPE_WITH_TEXT",
+              "layout": {
+                "mode": "none",
+                "sizing": {},
+                "locationRelativeToParent": {
+                  "x": 423,
+                  "y": 108
+                },
+                "dimensions": {
+                  "width": 311.25,
+                  "height": 448
+                }
+              },
+              "fills": "fill_658ab2fa",
+              "borderRadius": "6px"
+            },
+            {
+              "id": "8:143380",
+              "name": "Shape with text",
+              "type": "SHAPE_WITH_TEXT",
+              "layout": {
+                "mode": "none",
+                "sizing": {},
+                "locationRelativeToParent": {
+                  "x": 781.75,
+                  "y": 108
+                },
+                "dimensions": {
+                  "width": 311.25,
+                  "height": 448
+                }
+              },
+              "fills": "fill_658ab2fa",
+              "borderRadius": "6px"
+            },
+            {
+              "id": "8:143381",
+              "name": "Here you will",
+              "template": "EL-d431b884"
+            },
+            {
+              "id": "8:143382",
+              "name": "Check KYC status",
+              "template": "EL-760a1ed6"
+            },
+            {
+              "id": "8:143383",
+              "name": "Safety tasks",
+              "type": "TEXT",
+              "layout": {
+                "mode": "none",
+                "sizing": {},
+                "locationRelativeToParent": {
+                  "x": 108,
+                  "y": 344.45
+                },
+                "dimensions": {
+                  "width": 228,
+                  "height": 60
+                }
+              },
+              "text": "Safety tasks",
+              "textStyle": "style_7af87e72",
+              "fills": "fill_e4377e4e"
+            },
+            {
+              "id": "8:143384",
+              "name": "Support",
+              "type": "SHAPE_WITH_TEXT",
+              "layout": {
+                "mode": "none",
+                "sizing": {},
+                "locationRelativeToParent": {
+                  "x": 782,
+                  "y": 427
+                },
+                "dimensions": {
+                  "width": 176,
+                  "height": 104
+                }
+              },
+              "fills": "fill_e4377e4e",
+              "borderRadius": "41.599998474121094px"
+            },
+            {
+              "id": "8:143385",
+              "name": "Burger: Logout Safety About",
+              "type": "TEXT",
+              "layout": {
+                "mode": "none",
+                "sizing": {},
+                "locationRelativeToParent": {
+                  "x": 1141,
+                  "y": 137
+                },
+                "dimensions": {
+                  "width": 135,
+                  "height": 240
+                }
+              },
+              "text": "Burger:\\nLogout\\nSafety\\nAbout",
+              "textStyle": "style_7af87e72",
+              "fills": "fill_e4377e4e"
+            },
+            {
+              "id": "8:143386",
+              "name": "have...Accounts, coins, wallets You should make KYC now, without it we cant do anything for you. Let’s wait for KYC staus - we will notify you",
+              "type": "TEXT",
+              "layout": {
+                "mode": "none",
+                "sizing": {},
+                "locationRelativeToParent": {
+                  "x": 108,
+                  "y": 200.18
+                },
+                "dimensions": {
+                  "width": 253,
+                  "height": 120
+                }
+              },
+              "text": "have...Accounts, coins, wallets\\nYou should make KYC now, without it we cant do anything for you. Let’s wait for KYC staus - we will notify you",
+              "textStyle": "style_fefb9dcd",
+              "fills": "fill_e4377e4e"
+            },
+            {
+              "id": "8:143387",
+              "name": "Support + Notifications",
+              "type": "TEXT",
+              "layout": {
+                "mode": "none",
+                "sizing": {},
+                "locationRelativeToParent": {
+                  "x": 821,
+                  "y": 137.45
+                },
+                "dimensions": {
+                  "width": 176,
+                  "height": 240
+                }
+              },
+              "text": "Support +\\nNotifications",
+              "textStyle": "style_7af87e72",
+              "fills": "fill_e4377e4e"
+            },
+            {
+              "id": "8:143388",
+              "name": "VERIFICATION CENTER",
+              "type": "TEXT",
+              "layout": {
+                "mode": "none",
+                "sizing": {},
+                "locationRelativeToParent": {
+                  "x": 436,
+                  "y": 137
+                },
+                "dimensions": {
+                  "width": 286,
+                  "height": 180
+                }
+              },
+              "text": "VERIFICATION CENTER\\n",
+              "textStyle": "style_7af87e72",
+              "fills": "fill_e4377e4e"
+            }
+          ]
+        },
+        {
+          "id": "8:143389",
+          "name": "App on this stage",
+          "type": "SECTION",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 1370,
+              "y": 1268
+            },
+            "dimensions": {
+              "width": 1168,
+              "height": 604
+            }
+          },
+          "fills": "fill_5d01f0e1",
+          "strokes": "fill_bcbbe3cd",
+          "strokeWeight": "2px",
+          "children": [
+            {
+              "id": "8:143390",
+              "name": "Shape with text",
+              "template": "EL-1c90ec5c"
+            },
+            {
+              "id": "8:143391",
+              "name": "Shape with text",
+              "type": "SHAPE_WITH_TEXT",
+              "layout": {
+                "mode": "none",
+                "sizing": {},
+                "locationRelativeToParent": {
+                  "x": 407,
+                  "y": 108
+                },
+                "dimensions": {
+                  "width": 248.25,
+                  "height": 448
+                }
+              },
+              "fills": "fill_658ab2fa",
+              "borderRadius": "6px"
+            },
+            {
+              "id": "8:143392",
+              "name": "Here you will",
+              "template": "EL-d431b884"
+            },
+            {
+              "id": "8:143393",
+              "name": "Make KYC",
+              "template": "EL-760a1ed6"
+            },
+            {
+              "id": "8:143394",
+              "name": "Safety tasks",
+              "type": "TEXT",
+              "layout": {
+                "mode": "none",
+                "sizing": {},
+                "locationRelativeToParent": {
+                  "x": 108,
+                  "y": 302.45
+                },
+                "dimensions": {
+                  "width": 228,
+                  "height": 60
+                }
+              },
+              "text": "Safety tasks",
+              "textStyle": "style_7af87e72",
+              "fills": "fill_e4377e4e"
+            },
+            {
+              "id": "8:143395",
+              "name": "Support",
+              "type": "SHAPE_WITH_TEXT",
+              "layout": {
+                "mode": "none",
+                "sizing": {},
+                "locationRelativeToParent": {
+                  "x": 424,
+                  "y": 423
+                },
+                "dimensions": {
+                  "width": 176,
+                  "height": 104
+                }
+              },
+              "fills": "fill_e4377e4e",
+              "borderRadius": "41.599998474121094px"
+            },
+            {
+              "id": "8:143396",
+              "name": "Burger: Logout Safety About",
+              "type": "TEXT",
+              "layout": {
+                "mode": "none",
+                "sizing": {},
+                "locationRelativeToParent": {
+                  "x": 687,
+                  "y": 137
+                },
+                "dimensions": {
+                  "width": 135,
+                  "height": 240
+                }
+              },
+              "text": "Burger:\\nLogout\\nSafety\\nAbout",
+              "textStyle": "style_7af87e72",
+              "fills": "fill_e4377e4e"
+            },
+            {
+              "id": "8:143397",
+              "name": "have...Accounts, coins, wallets You should make KYC now, without it we cant do anything for you",
+              "type": "TEXT",
+              "layout": {
+                "mode": "none",
+                "sizing": {},
+                "locationRelativeToParent": {
+                  "x": 103,
+                  "y": 200.18
+                },
+                "dimensions": {
+                  "width": 253,
+                  "height": 96
+                }
+              },
+              "text": "have...Accounts, coins, wallets\\nYou should make KYC now, without it we cant do anything for you",
+              "textStyle": "style_fefb9dcd",
+              "fills": "fill_e4377e4e"
+            },
+            {
+              "id": "8:143398",
+              "name": "Support + Notifications",
+              "type": "TEXT",
+              "layout": {
+                "mode": "none",
+                "sizing": {},
+                "locationRelativeToParent": {
+                  "x": 424,
+                  "y": 137.45
+                },
+                "dimensions": {
+                  "width": 176,
+                  "height": 240
+                }
+              },
+              "text": "Support +\\nNotifications",
+              "textStyle": "style_7af87e72",
+              "fills": "fill_e4377e4e"
+            }
+          ]
+        },
+        {
+          "id": "8:143399",
+          "name": "Sign up: Country Email",
+          "type": "SHAPE_WITH_TEXT",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 720,
+              "y": 93
+            },
+            "dimensions": {
+              "width": 432,
+              "height": 232
+            }
+          },
+          "fills": "fill_97744796",
+          "borderRadius": "6px"
+        },
+        {
+          "id": "8:143400",
+          "name": "Sorry we don’t operate in your country (we don’t show the reason)",
+          "type": "SHAPE_WITH_TEXT",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 816,
+              "y": 432
+            },
+            "dimensions": {
+              "width": 240,
+              "height": 112
+            }
+          },
+          "fills": "fill_658ab2fa",
+          "borderRadius": "6px"
+        },
+        {
+          "id": "8:143401",
+          "name": "Before KYC",
+          "type": "SHAPE_WITH_TEXT",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 1872,
+              "y": 112
+            },
+            "dimensions": {
+              "width": 512,
+              "height": 194.7
+            }
+          },
+          "fills": "fill_5d635f52",
+          "borderRadius": "6px"
+        },
+        {
+          "id": "8:143402",
+          "name": "KYC",
+          "type": "SHAPE_WITH_TEXT",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 2512,
+              "y": 112
+            },
+            "dimensions": {
+              "width": 512,
+              "height": 194.7
+            }
+          },
+          "fills": "fill_5d635f52",
+          "borderRadius": "6px"
+        },
+        {
+          "id": "8:143403",
+          "name": "While user waits KYC in Sumsub",
+          "type": "SHAPE_WITH_TEXT",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 3152,
+              "y": 112
+            },
+            "dimensions": {
+              "width": 906,
+              "height": 194.7
+            }
+          },
+          "fills": "fill_5d635f52",
+          "borderRadius": "6px"
+        },
+        {
+          "id": "8:143404",
+          "name": "Blacklisted",
+          "type": "CONNECTOR",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 861.75,
+              "y": 331
+            },
+            "dimensions": {
+              "width": 148.5,
+              "height": 94.5
+            }
+          },
+          "strokes": "fill_e4377e4e",
+          "strokeWeight": "4px",
+          "strokeAlign": "CENTER"
+        },
+        {
+          "id": "8:143405",
+          "name": "OK",
+          "type": "CONNECTOR",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 1158,
+              "y": 188.85
+            },
+            "dimensions": {
+              "width": 707.5,
+              "height": 41
+            }
+          },
+          "strokes": "fill_e4377e4e",
+          "strokeWeight": "4px",
+          "strokeAlign": "CENTER"
+        },
+        {
+          "id": "8:143406",
+          "name": "Login back",
+          "type": "SHAPE_WITH_TEXT",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 784,
+              "y": 624
+            },
+            "dimensions": {
+              "width": 304,
+              "height": 304
+            }
+          },
+          "fills": "fill_97744796",
+          "borderRadius": "6px"
+        },
+        {
+          "id": "8:143407",
+          "name": "Opens app",
+          "type": "SHAPE_WITH_TEXT",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 784,
+              "y": 1193.73
+            },
+            "dimensions": {
+              "width": 304,
+              "height": 304
+            }
+          },
+          "fills": "fill_fa76e12e",
+          "borderRadius": "6px"
+        },
+        {
+          "id": "8:143408",
+          "name": "Status Dropdown – Bring clarity to the status of your designs",
+          "type": "WIDGET",
+          "children": [
+            {
+              "id": "8:143409",
+              "name": "Widget",
+              "template": "EL-948c3853",
+              "children": [
+                {
+                  "id": "8:143410",
+                  "name": "Chips",
+                  "template": "EL-57265d70"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8:143412",
+          "name": "Status Dropdown – Bring clarity to the status of your designs",
+          "type": "WIDGET",
+          "children": [
+            {
+              "id": "8:143413",
+              "name": "Widget",
+              "template": "EL-948c3853",
+              "children": [
+                {
+                  "id": "8:143414",
+                  "name": "Chips",
+                  "template": "EL-57265d70"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8:143417",
+          "name": "Check KYC status",
+          "type": "SHAPE_WITH_TEXT",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 3504,
+              "y": 561
+            },
+            "dimensions": {
+              "width": 272,
+              "height": 100
+            }
+          },
+          "fills": "fill_e4377e4e",
+          "borderRadius": "40px"
+        },
+        {
+          "id": "8:143418",
+          "name": "Check KYC status",
+          "type": "SHAPE_WITH_TEXT",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 2632,
+              "y": 901
+            },
+            "dimensions": {
+              "width": 272,
+              "height": 100
+            }
+          },
+          "fills": "fill_e4377e4e",
+          "borderRadius": "40px"
+        },
+        {
+          "id": "8:143419",
+          "name": "Support",
+          "type": "SHAPE_WITH_TEXT",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 3504,
+              "y": 424
+            },
+            "dimensions": {
+              "width": 176,
+              "height": 104
+            }
+          },
+          "fills": "fill_e4377e4e",
+          "borderRadius": "41.599998474121094px"
+        },
+        {
+          "id": "8:143420",
+          "name": "Support",
+          "type": "SHAPE_WITH_TEXT",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 2680,
+              "y": 768
+            },
+            "dimensions": {
+              "width": 176,
+              "height": 104
+            }
+          },
+          "fills": "fill_e4377e4e",
+          "borderRadius": "41.599998474121094px"
+        },
+        {
+          "id": "8:143421",
+          "name": "Btn CONTINUE KYC + contact support (chat/whatsuup)",
+          "type": "SHAPE_WITH_TEXT",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 2576,
+              "y": 471
+            },
+            "dimensions": {
+              "width": 384,
+              "height": 268
+            }
+          },
+          "fills": "fill_8848787d",
+          "borderRadius": "6px"
+        },
+        {
+          "id": "8:143422",
+          "name": "???",
+          "type": "SHAPE_WITH_TEXT",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 184,
+              "y": 1760
+            },
+            "dimensions": {
+              "width": 240,
+              "height": 112
+            }
+          },
+          "fills": "fill_8848787d",
+          "borderRadius": "6px"
+        },
+        {
+          "id": "8:143423",
+          "name": "Email + In App Notif",
+          "type": "SHAPE_WITH_TEXT",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 4181,
+              "y": 307
+            },
+            "dimensions": {
+              "width": 301,
+              "height": 84
+            }
+          },
+          "fills": [
+            "#9747FF"
+          ],
+          "borderRadius": "6px"
+        },
+        {
+          "id": "8:143424",
+          "name": "Text",
+          "type": "TEXT",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 64,
+              "y": 37.27
+            },
+            "dimensions": {
+              "width": 675,
+              "height": 36
+            }
+          },
+          "text": "Not logged-in user or first timer",
+          "textStyle": "style_8b2f23e3",
+          "fills": "fill_f4392668"
+        },
+        {
+          "id": "8:143425",
+          "name": "Text",
+          "type": "TEXT",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 64,
+              "y": 992
+            },
+            "dimensions": {
+              "width": 675,
+              "height": 36
+            }
+          },
+          "text": "Logged-in user",
+          "textStyle": "style_8b2f23e3",
+          "fills": "fill_f4392668"
+        },
+        {
+          "id": "8:143426",
+          "name": "Text",
+          "type": "TEXT",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 3504,
+              "y": 694.27
+            },
+            "dimensions": {
+              "width": 333,
+              "height": 108
+            }
+          },
+          "text": "Organize your wallets while we are waitting for KYC\\n\\[Beneficciary\\]",
+          "textStyle": "style_2d8e6963",
+          "fills": "fill_f4392668"
+        },
+        {
+          "id": "8:143427",
+          "name": "HELLO - Marketing-sh screen Features of current version, what to expect (add video here when it’s ready) LOGIN, SUGNUP",
+          "type": "SHAPE_WITH_TEXT",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 64,
+              "y": 84
+            },
+            "dimensions": {
+              "width": 480,
+              "height": 604
+            }
+          },
+          "fills": "fill_490f82c0",
+          "borderRadius": "6px"
+        },
+        {
+          "id": "8:143428",
+          "name": "Nice to see you again Marketing-sh screen Features, what to expect, what it can do in current version, what’s new MPIN/biometrics",
+          "type": "SHAPE_WITH_TEXT",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 64,
+              "y": 1043.73
+            },
+            "dimensions": {
+              "width": 480,
+              "height": 604
+            }
+          },
+          "fills": "fill_490f82c0",
+          "borderRadius": "6px"
+        },
+        {
+          "id": "8:143429",
+          "name": "image 73",
+          "type": "RECTANGLE",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 277,
+              "y": 480
+            },
+            "dimensions": {
+              "width": 75,
+              "height": 162.53
+            }
+          },
+          "fills": "fill_9b4d1e01"
+        },
+        {
+          "id": "8:143430",
+          "name": "Connector line",
+          "type": "CONNECTOR",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 550,
+              "y": 209
+            },
+            "dimensions": {
+              "width": 163.5,
+              "height": 177
+            }
+          },
+          "strokes": "fill_e4377e4e",
+          "strokeWeight": "4px",
+          "strokeAlign": "CENTER"
+        },
+        {
+          "id": "8:143431",
+          "name": "if user logedout himself",
+          "type": "CONNECTOR",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 550,
+              "y": 386
+            },
+            "dimensions": {
+              "width": 227.5,
+              "height": 390
+            }
+          },
+          "strokes": "fill_e4377e4e",
+          "strokeWeight": "4px",
+          "strokeAlign": "CENTER"
+        },
+        {
+          "id": "8:143432",
+          "name": "Text",
+          "type": "TEXT",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 880,
+              "y": 764.18
+            },
+            "dimensions": {
+              "width": 144,
+              "height": 48
+            }
+          },
+          "text": "start from the place where left",
+          "textStyle": "style_fefb9dcd",
+          "fills": "fill_658ab2fa"
+        },
+        {
+          "id": "8:143433",
+          "name": "MPIN/Biometrics OK",
+          "type": "CONNECTOR",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 550,
+              "y": 1313.23
+            },
+            "dimensions": {
+              "width": 227.5,
+              "height": 65
+            }
+          },
+          "strokes": "fill_e4377e4e",
+          "strokeWeight": "4px",
+          "strokeAlign": "CENTER"
+        },
+        {
+          "id": "8:143434",
+          "name": "Uses app))) We show updates",
+          "type": "SHAPE_WITH_TEXT",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 784,
+              "y": 1568
+            },
+            "dimensions": {
+              "width": 304,
+              "height": 304
+            }
+          },
+          "fills": "fill_fa76e12e",
+          "borderRadius": "6px"
+        },
+        {
+          "id": "8:143435",
+          "name": "Connector line",
+          "type": "CONNECTOR",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 936,
+              "y": 1345.73
+            },
+            "dimensions": {
+              "width": 184,
+              "height": 215.77
+            }
+          },
+          "strokes": "fill_e4377e4e",
+          "strokeWeight": "4px",
+          "strokeAlign": "CENTER"
+        },
+        {
+          "id": "8:143436",
+          "name": "Status Dropdown – Bring clarity to the status of your designs",
+          "type": "WIDGET",
+          "children": [
+            {
+              "id": "8:143437",
+              "name": "Widget",
+              "template": "EL-948c3853",
+              "children": [
+                {
+                  "id": "8:143438",
+                  "name": "Chips",
+                  "template": "EL-57265d70"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8:143440",
+          "name": "Status Dropdown – Bring clarity to the status of your designs",
+          "type": "WIDGET",
+          "children": [
+            {
+              "id": "8:143441",
+              "name": "Widget",
+              "template": "EL-948c3853",
+              "children": [
+                {
+                  "id": "8:143442",
+                  "name": "Chips",
+                  "template": "EL-57265d70"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8:143444",
+          "name": "Text",
+          "type": "TEXT",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 1888,
+              "y": 357.27
+            },
+            "dimensions": {
+              "width": 383.25,
+              "height": 36
+            }
+          },
+          "text": "“Pass KYC first” + why to do it",
+          "textStyle": "style_2d8e6963",
+          "fills": "fill_f4392668"
+        },
+        {
+          "id": "8:143445",
+          "name": "Text",
+          "type": "TEXT",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 3504,
+              "y": 357.27
+            },
+            "dimensions": {
+              "width": 383.25,
+              "height": 36
+            }
+          },
+          "text": "Your KYC status btn: CHECK",
+          "textStyle": "style_2d8e6963",
+          "fills": "fill_f4392668"
+        },
+        {
+          "id": "8:143446",
+          "name": "Text",
+          "type": "TEXT",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 1072,
+              "y": 846.18
+            },
+            "dimensions": {
+              "width": 272,
+              "height": 72
+            }
+          },
+          "text": "Fix bugs fix scroll, font color, but with re-login on android \\(instead signup\\)",
+          "textStyle": "style_fefb9dcd",
+          "fills": "fill_f4392668"
+        },
+        {
+          "id": "8:143447",
+          "name": "Text",
+          "type": "TEXT",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 1184,
+              "y": 235.18
+            },
+            "dimensions": {
+              "width": 272,
+              "height": 72
+            }
+          },
+          "text": "Fix bugs fix scroll, font color, \\nKeyboard should open itself when MPIN is requested",
+          "textStyle": "style_fefb9dcd",
+          "fills": "fill_f4392668"
+        },
+        {
+          "id": "8:143448",
+          "name": "Text",
+          "type": "TEXT",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 560,
+              "y": 1553.18
+            },
+            "dimensions": {
+              "width": 272,
+              "height": 72
+            }
+          },
+          "text": "Fix bugs fix scroll, font color, \\nKeyboard should open itself when MPIN is requested",
+          "textStyle": "style_fefb9dcd",
+          "fills": "fill_f4392668"
+        },
+        {
+          "id": "8:143449",
+          "name": "Text",
+          "type": "TEXT",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 1888,
+              "y": 453.18
+            },
+            "dimensions": {
+              "width": 272,
+              "height": 48
+            }
+          },
+          "text": "Hide future functions\\nApp is restructured",
+          "textStyle": "style_fefb9dcd",
+          "fills": "fill_f4392668"
+        },
+        {
+          "id": "8:143450",
+          "name": "Not Passed",
+          "type": "CONNECTOR",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 4064,
+              "y": 209.35
+            },
+            "dimensions": {
+              "width": 142.11,
+              "height": 139.65
+            }
+          },
+          "strokes": [
+            "#F24822"
+          ],
+          "strokeWeight": "4px",
+          "strokeAlign": "CENTER"
+        },
+        {
+          "id": "8:143451",
+          "name": "Connector line",
+          "type": "CONNECTOR",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 3030,
+              "y": 209.35
+            },
+            "dimensions": {
+              "width": 115.5,
+              "height": 0
+            }
+          },
+          "strokes": "fill_e4377e4e",
+          "strokeWeight": "4px",
+          "strokeAlign": "CENTER"
+        },
+        {
+          "id": "8:143452",
+          "name": "Connector line",
+          "type": "CONNECTOR",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 2390,
+              "y": 209.35
+            },
+            "dimensions": {
+              "width": 115.5,
+              "height": 0
+            }
+          },
+          "strokes": "fill_e4377e4e",
+          "strokeWeight": "4px",
+          "strokeAlign": "CENTER"
+        },
+        {
+          "id": "8:143453",
+          "name": "interrupted",
+          "type": "CONNECTOR",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 2717.5,
+              "y": 312.7
+            },
+            "dimensions": {
+              "width": 101,
+              "height": 151.8
+            }
+          },
+          "strokes": "fill_e4377e4e",
+          "strokeWeight": "4px",
+          "strokeAlign": "CENTER"
+        },
+        {
+          "id": "8:143454",
+          "name": "In the meantime: safety tasks organize your accounts here Questioneer and pre-creation of accounts/wallets you wil have EUR in Spain byr default which wallets do you have / want to use / Organize your wallets add withdraw methods / yours and other people you would share to",
+          "type": "SHAPE_WITH_TEXT",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 3504,
+              "y": 832
+            },
+            "dimensions": {
+              "width": 544,
+              "height": 304
+            }
+          },
+          "fills": [
+            "#BDE3FF"
+          ],
+          "borderRadius": "6px"
+        },
+        {
+          "id": "8:143455",
+          "name": "NOT OK",
+          "type": "CONNECTOR",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 265,
+              "y": 1653.73
+            },
+            "dimensions": {
+              "width": 78,
+              "height": 99.77
+            }
+          },
+          "strokes": "fill_e4377e4e",
+          "strokeWeight": "4px",
+          "strokeAlign": "CENTER"
+        },
+        {
+          "id": "8:143456",
+          "name": "Sign Up/In",
+          "type": "SHAPE_WITH_TEXT",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 80,
+              "y": 341
+            },
+            "dimensions": {
+              "width": 272,
+              "height": 100
+            }
+          },
+          "fills": "fill_e4377e4e",
+          "borderRadius": "40px"
+        },
+        {
+          "id": "8:143457",
+          "name": "MPI / Biometrics",
+          "type": "SHAPE_WITH_TEXT",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 80,
+              "y": 1332
+            },
+            "dimensions": {
+              "width": 272,
+              "height": 100
+            }
+          },
+          "fills": "fill_e4377e4e",
+          "borderRadius": "40px"
+        },
+        {
+          "id": "8:143458",
+          "name": "image 441",
+          "type": "RECTANGLE",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 112,
+              "y": 496
+            },
+            "dimensions": {
+              "width": 78,
+              "height": 41.04
+            }
+          },
+          "fills": "fill_13666905"
+        },
+        {
+          "id": "8:143459",
+          "name": "IMG_3515",
+          "type": "RECTANGLE",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 208,
+              "y": 512
+            },
+            "dimensions": {
+              "width": 68.48,
+              "height": 148.28
+            }
+          },
+          "fills": "fill_d65ecb71"
+        },
+        {
+          "id": "8:143460",
+          "name": "image 442",
+          "type": "RECTANGLE",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 116.76,
+              "y": 553.49
+            },
+            "dimensions": {
+              "width": 68.48,
+              "height": 43.06
+            }
+          },
+          "fills": "fill_a80d7cc8"
+        },
+        {
+          "id": "8:143461",
+          "name": "image 443",
+          "type": "RECTANGLE",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 325,
+              "y": 1454
+            },
+            "dimensions": {
+              "width": 75,
+              "height": 162.53
+            }
+          },
+          "fills": "fill_9b4d1e01"
+        },
+        {
+          "id": "8:143462",
+          "name": "image 444",
+          "type": "RECTANGLE",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 160,
+              "y": 1470
+            },
+            "dimensions": {
+              "width": 78,
+              "height": 41.04
+            }
+          },
+          "fills": "fill_13666905"
+        },
+        {
+          "id": "8:143463",
+          "name": "IMG_3515",
+          "type": "RECTANGLE",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 256,
+              "y": 1486
+            },
+            "dimensions": {
+              "width": 46,
+              "height": 99.61
+            }
+          },
+          "fills": "fill_d65ecb71"
+        },
+        {
+          "id": "8:143464",
+          "name": "image 445",
+          "type": "RECTANGLE",
+          "layout": {
+            "mode": "none",
+            "sizing": {},
+            "locationRelativeToParent": {
+              "x": 164.76,
+              "y": 1527.49
+            },
+            "dimensions": {
+              "width": 68.48,
+              "height": 43.06
+            }
+          },
+          "fills": "fill_a80d7cc8"
+        }
+      ]
+    }
+  ],
+  "components": {},
+  "componentSets": {},
+  "globalVars": {
+    "styles": {
+      "fill_5d01f0e1": [
+        "#DBF0FF"
+      ],
+      "fill_bcbbe3cd": [
+        "#0D99FF"
+      ],
+      "fill_658ab2fa": [
+        "#FFFFFF"
+      ],
+      "style_7af87e72": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontWeight": 500,
+        "fontSize": 40,
+        "lineHeight": "1.5em",
+        "letterSpacing": "-0.022em",
+        "textAlignHorizontal": "LEFT",
+        "textAlignVertical": "TOP"
+      },
+      "fill_e4377e4e": [
+        "#1E1E1E"
+      ],
+      "style_fefb9dcd": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontWeight": 500,
+        "fontSize": 16,
+        "lineHeight": "1.5em",
+        "letterSpacing": "-0.011em",
+        "textAlignHorizontal": "LEFT",
+        "textAlignVertical": "TOP"
+      },
+      "fill_97744796": [
+        "#757575"
+      ],
+      "fill_5d635f52": [
+        "#FFCD29"
+      ],
+      "fill_fa76e12e": [
+        "#E6E6E6"
+      ],
+      "fill_8848787d": [
+        "#FFC7C2"
+      ],
+      "style_8b2f23e3": {
+        "fontFamily": "Inter",
+        "fontStyle": "Bold",
+        "fontWeight": 700,
+        "fontSize": 24,
+        "lineHeight": "1.5em",
+        "letterSpacing": "-0.019em",
+        "textAlignHorizontal": "LEFT",
+        "textAlignVertical": "TOP"
+      },
+      "fill_f4392668": [
+        "rgba(0, 0, 0, 0.8)"
+      ],
+      "style_2d8e6963": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontWeight": 500,
+        "fontSize": 24,
+        "lineHeight": "1.5em",
+        "letterSpacing": "-0.019em",
+        "textAlignHorizontal": "LEFT",
+        "textAlignVertical": "TOP"
+      },
+      "fill_490f82c0": [
+        "#FFCCFC"
+      ],
+      "fill_9b4d1e01": [
+        {
+          "type": "IMAGE",
+          "imageRef": "2e28fa80412311ceb621159e8d42f37e70753128",
+          "scaleMode": "STRETCH",
+          "objectFit": "fill",
+          "isBackground": false,
+          "imageDownloadArguments": {
+            "needsCropping": true,
+            "requiresImageDimensions": false,
+            "cropTransform": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ]
+            ],
+            "filenameSuffix": "56586a"
+          }
+        }
+      ],
+      "fill_13666905": [
+        {
+          "type": "IMAGE",
+          "imageRef": "d82b1c9094ac8d5ee5dd63bb195b9d0dd297e008",
+          "scaleMode": "STRETCH",
+          "objectFit": "fill",
+          "isBackground": false,
+          "imageDownloadArguments": {
+            "needsCropping": true,
+            "requiresImageDimensions": false,
+            "cropTransform": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ]
+            ],
+            "filenameSuffix": "56586a"
+          }
+        }
+      ],
+      "fill_d65ecb71": [
+        {
+          "type": "IMAGE",
+          "imageRef": "782a24c7a82daed6d0284a838320cecf369866f0",
+          "scaleMode": "STRETCH",
+          "objectFit": "fill",
+          "isBackground": false,
+          "imageDownloadArguments": {
+            "needsCropping": true,
+            "requiresImageDimensions": false,
+            "cropTransform": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ]
+            ],
+            "filenameSuffix": "56586a"
+          }
+        }
+      ],
+      "fill_a80d7cc8": [
+        {
+          "type": "IMAGE",
+          "imageRef": "15541ed81a092be96796a71c6b48eb03f1b57fec",
+          "scaleMode": "STRETCH",
+          "objectFit": "fill",
+          "isBackground": false,
+          "imageDownloadArguments": {
+            "needsCropping": true,
+            "requiresImageDimensions": false,
+            "cropTransform": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ]
+            ],
+            "filenameSuffix": "56586a"
+          }
+        }
+      ]
+    }
+  },
+  "elements": {
+    "EL-1c90ec5c": {
+      "type": "SHAPE_WITH_TEXT",
+      "layout": {
+        "mode": "none",
+        "sizing": {},
+        "locationRelativeToParent": {
+          "x": 64,
+          "y": 108
+        },
+        "dimensions": {
+          "width": 311.25,
+          "height": 448
+        }
+      },
+      "fills": "fill_658ab2fa",
+      "borderRadius": "6px"
+    },
+    "EL-d431b884": {
+      "type": "TEXT",
+      "layout": {
+        "mode": "none",
+        "sizing": {},
+        "locationRelativeToParent": {
+          "x": 103,
+          "y": 137
+        },
+        "dimensions": {
+          "width": 297,
+          "height": 60
+        }
+      },
+      "text": "Here you will",
+      "textStyle": "style_7af87e72",
+      "fills": "fill_e4377e4e"
+    },
+    "EL-760a1ed6": {
+      "type": "SHAPE_WITH_TEXT",
+      "layout": {
+        "mode": "none",
+        "sizing": {},
+        "locationRelativeToParent": {
+          "x": 84,
+          "y": 427
+        },
+        "dimensions": {
+          "width": 272,
+          "height": 100
+        }
+      },
+      "fills": "fill_e4377e4e",
+      "borderRadius": "40px"
+    },
+    "EL-948c3853": {
+      "type": "FRAME",
+      "layout": {
+        "mode": "column",
+        "justifyContent": "center",
+        "alignItems": "stretch",
+        "sizing": {
+          "horizontal": "hug",
+          "vertical": "hug"
+        }
+      },
+      "borderRadius": "0px 0px 0px 0px"
+    },
+    "EL-57265d70": {
+      "type": "FRAME",
+      "layout": {
+        "mode": "row",
+        "alignSelf": "stretch",
+        "padding": "8px 16px",
+        "justifyContent": "center",
+        "alignItems": "center",
+        "sizing": {
+          "horizontal": "fill",
+          "vertical": "hug"
+        }
+      },
+      "fills": [
+        "#D20000"
+      ],
+      "borderRadius": "1000px 1000px 1000px 1000px"
+    }
+  }
+}

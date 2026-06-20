@@ -1,0 +1,50 @@
+{
+  "name": "prodigy-fintech",
+  "private": true,
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=10"
+  },
+  "scripts": {
+    "dev": "pnpm --parallel -r run dev",
+    "dev:backend": "pnpm --filter @prodigy/backend run dev",
+    "dev:admin": "pnpm --filter @prodigy/admin run dev",
+    "dev:consumer": "pnpm --filter @prodigy/consumer run dev",
+    "dev:widget": "pnpm --filter @prodigy/widget run dev",
+    "dev:partner": "pnpm --filter @prodigy/partner run dev",
+    "dev:sumsub": "pnpm --filter @prodigy/sumsub-sim run dev",
+    "dev:sysmap": "pnpm --filter @prodigy/system-map run dev",
+    "dev:landing": "pnpm --filter @prodigy/landing run dev",
+    "dev:db": "pnpm --filter @prodigy/db-viewer run dev",
+    "build": "pnpm -r run build",
+    "typecheck": "pnpm -r run typecheck",
+    "lint": "pnpm -r run lint",
+    "test": "pnpm -r run test",
+    "test:unit": "vitest run tests/unit/",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:report": "playwright show-report",
+    "db:seed": "pnpm --filter @prodigy/backend run db:seed",
+    "db:reset": "pnpm --filter @prodigy/backend run db:reset",
+    "db:studio": "pnpm --filter @prodigy/backend run db:studio"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@prisma/client",
+      "@prisma/engines",
+      "esbuild",
+      "prisma",
+      "vue-demi",
+      "vue-echarts"
+    ]
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.43.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.1"
+  },
+  "dependencies": {
+    "canvas-confetti": "^1.9.4"
+  }
+}

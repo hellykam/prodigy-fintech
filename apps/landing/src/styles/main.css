@@ -1,0 +1,394 @@
+@import './reveal-animations.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Design tokens ─────────────────────────────────────────── */
+:root {
+  --paper: #ffffff;
+  --ink: #0a0a0a;
+  --ink-mid: #3d3d3d;
+  --ink-muted: #636363;
+  --ink-faint: #e8e8e8;
+  --line: #d0d0d0;
+  --line-strong: #0a0a0a;
+
+  /* Iridescent gradient — used ONLY as a controlled accent */
+  --iris: linear-gradient(
+    90deg,
+    #667eea 0%,
+    #764ba2 15%,
+    #f093fb 30%,
+    #f5576c 45%,
+    #4facfe 65%,
+    #00f2fe 80%,
+    #667eea 100%
+  );
+}
+
+/* ─── Base ──────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Typography ─────────────────────────────────────────────── */
+.font-display {
+  font-family: 'Barlow Condensed', Impact, 'Arial Narrow', sans-serif;
+}
+
+.font-mono {
+  font-family: 'Space Mono', 'JetBrains Mono', 'Courier New', monospace;
+}
+
+/* Display headline — Swiss editorial scale */
+.text-display {
+  font-family: 'Barlow Condensed', Impact, 'Arial Narrow', sans-serif;
+  font-size: clamp(4.5rem, 11vw, 9.5rem);
+  font-weight: 900;
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.text-hero {
+  font-family: 'Barlow Condensed', Impact, 'Arial Narrow', sans-serif;
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+/* Section label — small uppercase metadata */
+.label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-mid);
+}
+
+/* Receipt row — tabular mono */
+.receipt-row {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.375rem 0;
+  border-bottom: 1px solid var(--ink-faint);
+}
+
+/* ─── Iridescent gradient text ───────────────────────────────── */
+.iris-text {
+  background: var(--iris);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: iris-shift 5s linear infinite;
+  will-change: background-position;
+}
+
+@keyframes iris-shift {
+  0%   { background-position: 0% center; }
+  100% { background-position: -200% center; }
+}
+
+/* Iridescent border/stripe accent */
+.iris-stripe {
+  background: var(--iris);
+  background-size: 200% auto;
+  animation: iris-shift 5s linear infinite;
+  will-change: background-position;
+}
+
+/* ─── Grid + layout ──────────────────────────────────────────── */
+.section-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-top: 1px solid var(--line-strong);
+}
+
+/* Swiss grid rule — horizontal rule between sections */
+.rule {
+  border: none;
+  border-top: 1px solid var(--ink);
+  margin: 0;
+}
+
+.rule-muted {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 0;
+}
+
+/* Cell border */
+.cell {
+  border: 1px solid var(--line);
+}
+
+/* ─── Ticker strip ───────────────────────────────────────────── */
+.ticker-track {
+  display: flex;
+  white-space: nowrap;
+  animation: ticker 28s linear infinite;
+  will-change: transform;
+}
+
+@keyframes ticker {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ─── Receipt card ───────────────────────────────────────────── */
+.receipt-card {
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  font-family: 'Space Mono', monospace;
+  position: relative;
+}
+
+.receipt-card::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--ink) 0px,
+    var(--ink) 4px,
+    transparent 4px,
+    transparent 8px
+  );
+}
+
+/* ─── Stamp effect ───────────────────────────────────────────── */
+.stamp {
+  display: inline-block;
+  border: 2px solid currentColor;
+  padding: 0.1em 0.4em;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.stamp-approved {
+  color: #0a0a0a;
+  border-color: #0a0a0a;
+}
+
+.stamp-pending {
+  color: #8a8a8a;
+  border-color: #8a8a8a;
+}
+
+.stamp-review {
+  color: #c44;
+  border-color: #c44;
+}
+
+/* ─── Signal dot ─────────────────────────────────────────────── */
+.signal-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--ink);
+  animation: signal-pulse 2s ease-in-out infinite;
+}
+
+@keyframes signal-pulse {
+  0%, 100% { opacity: 0.25; transform: scale(0.8); }
+  50%       { opacity: 1;    transform: scale(1);   }
+}
+
+/* ─── Animations: print-in ───────────────────────────────────── */
+.print-in {
+  animation: print-in 0.35s ease forwards;
+}
+
+@keyframes print-in {
+  0%   { opacity: 0; transform: translateY(-3px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Nav link underline hover ───────────────────────────────── */
+.nav-link { position: relative; }
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.2s ease;
+}
+.nav-link:hover::after { width: 100%; }
+
+/* ─── CTA button lift ────────────────────────────────────────── */
+.btn-primary {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* ─── Trust logo marquee ─────────────────────────────────────── */
+.trust-marquee {
+  display: flex;
+  animation: marquee 30s linear infinite;
+}
+.trust-marquee:hover { animation-play-state: paused; }
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ─── Reduced motion ─────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  .ticker-track,
+  .iris-text,
+  .iris-stripe,
+  .signal-dot {
+    animation: none !important;
+  }
+
+  .iris-text {
+    background: linear-gradient(90deg, #667eea, #4facfe);
+    background-size: auto;
+    background-position: 0 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ─── Focus styles ───────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--ink-faint);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--ink-muted);
+}
+
+/* ─── Scroll reveal ──────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ─── Utilities ──────────────────────────────────────────────── */
+.border-ink { border-color: var(--ink); }
+.border-line { border-color: var(--line); }
+.text-muted { color: var(--ink-muted); }
+.text-faint { color: var(--line); }
+.bg-ink { background-color: var(--ink); color: var(--paper); }
+
+/* ─── Card entrance animation ──────────────────────────────── */
+@keyframes card-enter {
+  0%   { opacity: 0; transform: translateY(16px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.is-visible .module-card {
+  animation: card-enter 0.45s ease both;
+}
+
+.is-visible .module-card:nth-child(1) { animation-delay: 0ms; }
+.is-visible .module-card:nth-child(2) { animation-delay: 60ms; }
+.is-visible .module-card:nth-child(3) { animation-delay: 120ms; }
+.is-visible .module-card:nth-child(4) { animation-delay: 180ms; }
+.is-visible .module-card:nth-child(5) { animation-delay: 240ms; }
+.is-visible .module-card:nth-child(6) { animation-delay: 300ms; }
+.is-visible .module-card:nth-child(7) { animation-delay: 360ms; }
+.is-visible .module-card:nth-child(8) { animation-delay: 420ms; }
+
+/* ─── Fee receipt blur-to-clear ──────────────────────────────── */
+@keyframes fee-blur-clear {
+  0%   { filter: blur(4px); opacity: 0.4; }
+  100% { filter: blur(0);   opacity: 1; }
+}
+
+.is-visible .receipt-pair.total dd {
+  animation: fee-blur-clear 0.5s ease both;
+  animation-delay: 0.6s;
+}
+
+/* ─── Stat stamp entrance ──────────────────────────────────── */
+@keyframes stat-stamp {
+  0%   { opacity: 0; transform: scale(1.15); }
+  60%  { opacity: 1; transform: scale(0.97); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.is-visible .stat-n {
+  animation: stat-stamp 0.4s ease both;
+}
+
+.is-visible .stat-cell:nth-child(1) .stat-n { animation-delay: 0ms; }
+.is-visible .stat-cell:nth-child(2) .stat-n { animation-delay: 100ms; }
+.is-visible .stat-cell:nth-child(3) .stat-n { animation-delay: 200ms; }
+.is-visible .stat-cell:nth-child(4) .stat-n { animation-delay: 300ms; }
+
+/* ─── Reduced-motion overrides for scroll-triggered animations ── */
+@media (prefers-reduced-motion: reduce) {
+  .is-visible .module-card,
+  .is-visible .receipt-pair.total dd,
+  .is-visible .stat-n {
+    animation: none !important;
+  }
+}
